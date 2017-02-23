@@ -10,7 +10,7 @@ MapReduce二次排序例子
     只要把第一个数相同的行发到同一个reduce且重写每行间数的大小比较即可
   
 * 定义一个新key(IntPair)，由要排序的两个数组成
-* map输出<IntPair,key>
+* map输出&lt;IntPair,key&gt;
 * 重写Partitioner,第一个数一样的，发送到同一个reduce
 * 重写WritableComparator，按第一个数分组，（IntPair中也要重写compareTo方法）
 
